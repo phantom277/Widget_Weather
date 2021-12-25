@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>weather forecast</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__container _container">
+			<div class="header__row">
+				<div class="header__logo">
+					<a href="#">MeteoMaks</a>
+				</div>
+				<nav class="header__navigation">
+					<ul class="header__list">
+						<li><a href="#">Weather</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Navigation</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main class="wrapper">
+		<div class="page__weather weather">
+			<div class="weather__container __container">
+				<nav class="menu">
+					<button type="button" class="menu__button">
+						<span>Choose city</span>
+						<span>Close list</span>
+					</button>
+					<ul hidden class="menu__list">
+						<li><a href="#" class="menu__link">Chernigov</a></li>
+						<li><a href="#" class="menu__link">Kuiv</a></li>
+						<li><a href="#" class="menu__link">Doneck</a></li>
+					</ul>
+				</nav>
+				<div class="content">
+					<div class="tabs">
+						<nav class="tabs__items">
+							<a href="#tab__01" class="tabs__item"><span>Yesterday Weather</span></a>
+							<a href="#tab__02" class="tabs__item"><span>Today Weather</span></a>
+							<a href="#tab__03" class="tabs__item"><span>Tomorrow Weather</span></a>
+						</nav>
+						<div class="tabs__body">
+							<div id="tab__01" class="tabs__block">
+								<div class="weather__contant">
+									<h2>Redcart, North Yorkshire, United Kingdom</h2>
+									<div class="weather__title title-contant">
+										<div class="title-contant__image">
+											<img src="/img/main/PNG/day_clear.png" alt="icon-weather">
+											<h4>Sunny</h4>
+										</div>
+										<div class="title-contant__temp">
+											20 <sup>o</sup> <span>C</span>	
+										</div>
+										<div class="title-contant__description">
+											<p>wind: 19 kmph</p>
+											<p>precip: 0 mm</p>
+											<p>Pressure: 1026mb</p>
+										</div>
+									</div>
+									<div class="weather__main main-contant">
+										<div class="main-contant__item">
+											<h4>sat</h4>
+											<img src="/img/main/PNG/day_partial_cloud.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>sun</h4>
+											<img src="/img/main/PNG/cloudy.png" alt="icon-weather small">
+											<p>15<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>mon</h4>
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>tue</h4>
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>wed</h4>
+											<img src="/img/main/PNG/day_rain_thunder.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="tab__02" class="tabs__block">
+								<div class="weather__contant">
+									<h2>Redcart, North Yorkshire, United Kingdom</h2>
+									<div class="weather__title title-contant">
+										<div class="title-contant__image">
+											<img src="/img/main//PNG/day_partial_cloud.png" alt="icon-weather">
+											<h4>Clouds</h4>
+										</div>
+										<div class="title-contant__temp">
+											18 <sup>o</sup> <span>C</span>	
+										</div>
+										<div class="title-contant__description">
+											<p>wind: 24 kmph</p>
+											<p>precip: 1 mm</p>
+											<p>Pressure: 1056 mb</p>
+										</div>
+									</div>
+									<div class="weather__main main-contant">
+										<div class="main-contant__item">
+											<h4>sun</h4>
+											<img src="/img/main/PNG/day_partial_cloud.png" alt="icon-weather small">
+											<p>15<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>mon</h4>
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>tue</h4>
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>wed</h4>
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather small">
+											<p>15<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>thu</h4>
+											<img src="/img/main/PNG/day_partial_cloud.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="tab__03" class="tabs__block">
+								<div class="weather__contant">
+									<h2>Redcart, North Yorkshire, United Kingdom</h2>
+									<div class="weather__title title-contant">
+										<div class="title-contant__image">
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather">
+											<h4>Rain</h4>
+										</div>
+										<div class="title-contant__temp">
+											16 <sup>o</sup> <span>C</span>	
+										</div>
+										<div class="title-contant__description">
+											<p>wind: 27 kmph</p>
+											<p>precip: 4 mm</p>
+											<p>Pressure: 996mb</p>
+										</div>
+									</div>
+									<div class="weather__main main-contant">
+										<div class="main-contant__item">
+											<h4>mon</h4>
+											<img src="/img/main/PNG/day_partial_cloud.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>tue</h4>
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather small">
+											<p>15<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>wed</h4>
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>thu</h4>
+											<img src="/img/main/PNG/day_rain.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+										<div class="main-contant__item">
+											<h4>fri</h4>
+											<img src="/img/main/PNG/day_rain_thunder.png" alt="icon-weather small">
+											<p>14<sup>o</sup>C</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

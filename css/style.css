@@ -1,0 +1,360 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+body{
+	background: url('../img/header/kreshatik_8.jpg') 0 0/100% no-repeat;
+
+}
+.wrapper {
+	min-width: 100%;
+	overflow: hidden;
+}
+
+/* --------------Технические контейнеры---------- */
+
+.__container {
+	max-width: 1153px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	
+}
+
+
+/* --------------Page---------- */
+
+.page__weather {
+	padding: 30px;
+	display: flex;
+}
+@media (max-width: 750px) {
+	.page__weather{
+		padding: calc(0px + (30 - 0) * ((100vw - 320px) / (1153 - 320)));
+	}
+}
+.header {
+}
+
+/* --------------Page header---------- */
+
+.header__container {
+}
+.header__row {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	margin-top: 30px;
+}
+@media (max-width: 750px) {
+	.header__row{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.header__logo a {
+	font-size: 40px;
+	color: rgb(37, 0, 138);
+	font-weight: 900;
+	text-shadow: 5px 0px 10px rgb(255, 0, 0);
+	opacity: 90%;
+	margin: 0px 50px 0px 0px;
+	transition-duration: 0.5s;
+	border: 2px solid rgba(255, 123, 0, 0.2);
+	background-color: rgba(255, 123, 0, 0.2);
+	padding: 0px 5px 5px 5px;
+	border-radius: 10px;
+}
+@media (max-width: 950px) {
+	.header__logo a {
+		font-size: calc(20px + (40 - 28) * ((100vw - 320px) / (1153 - 320)));
+	}
+}
+@media (max-width: 750px) {
+	.header__logo {
+			margin: 15px 0px;
+	}
+}
+.header__logo a:hover{
+	text-shadow: 5px 0px 10px rgb(0, 255, 76);
+
+}
+.header__navigation {
+}
+.header__list {
+	display: flex;
+
+}
+.header__list a{
+	font-size: 30px;
+	color: rgb(233, 233, 233);
+	text-shadow: 0px 0px 10px rgb(0, 0, 0);
+	transition-duration: 0.5s;	
+}
+@media (max-width: 950px) {
+	.header__list a{
+		font-size: calc(17px + (30 - 17) * ((100vw - 320px) / (1153 - 320)));
+	}
+}
+.header__list a:hover{
+	text-shadow: 0px 0px 10px rgb(10, 206, 255);
+}
+.header__list li:not(:last-child){
+	margin-right: 30px;
+}
+@media (max-width: 950px) {
+	.header__list a{
+		margin-right: calc(15px + (30 - 15) * ((100vw - 320px) / (1153 - 320)));
+	}
+}
+
+/* --------------Page weather---------- */
+
+.weather {
+
+}
+.weather__container {
+}
+
+.weather__contant {
+	width: 480px;
+	background-color: #15384c;
+	border: 4px solid #5c7e97;
+	border-radius: 0px 0px 10px 10px;
+}
+.weather__contant h2{
+	font-size: 18px;
+	margin: 15px 0px 20px 0px;
+	text-align: center;
+}
+.weather__title {
+display: flex;
+justify-content: space-around;
+margin: 30px 0px;
+}
+.weather__title h4{
+	margin-top: 7px;
+	font-weight: 600;
+	text-align: center;
+}
+.title-contant {
+	display: flex;
+}
+.title-contant__image img{
+	max-width:50px;
+}
+.title-contant__temp {
+	font-size: 35px;
+}
+.title-contant__temp sup{
+	font-size: 20px;
+	letter-spacing: -8px;
+}
+.title-contant__temp span{
+	font-size: 28px;
+}
+.title-contant__description {
+	line-height: 22px;
+}
+.weather__main {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+.main-contant {
+}
+.main-contant__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.main-contant__item img{
+	max-width: 30px;
+	margin: 6px 0px 6px 0px;
+}
+/* --------------Menu Weather---------- */
+
+.menu {
+	display: inline-block;
+	position: absolute;
+	z-index: 10;
+}
+.menu._active .menu__list{
+	display: block;
+}
+.menu._active .menu__button span:first-child{
+display: none;
+}
+.menu._active .menu__button span:last-child{
+	display: block;
+	}
+	.menu__button{
+		border-radius: 10px 0px 10px 0px;
+		overflow: hidden;
+	}
+	.menu__button span{
+		font-size: 18px;
+		color: #fff;
+		background-color: rgba(34, 80, 104, 0.377);
+		padding: 0px 10px;
+	}
+	.menu__button span:hover {
+		text-shadow: 0px 0px 7px rgb(0, 0, 0);
+	}
+.menu__button span:first-child{
+	display: block;
+}
+.menu__button span:last-child{
+	display: none;
+}
+.menu__list {
+	background-color: rgba(34, 80, 104, 0.7);
+	padding: 15px;
+	border-radius: 0px 10px 10px 0px;
+}
+.menu__list :not(:last-child){
+	margin: 0px 0px 15px 0px;
+}
+.menu__link {
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+}
+.menu__list a:hover {
+	text-shadow: 0px 8px 7px rgb(255, 1, 1);
+}
+/* --------------Tabs---------- */
+
+.content {
+	background-color: rgba(34, 80, 104, 0.322);
+	border-radius: 10px;
+	padding: 25px;
+}
+.tabs {
+
+}
+.tabs__items{
+	display: flex;
+
+}
+.tabs__item {
+	flex: 0 1 33.333%;
+	height: 25px;
+	justify-content: center;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+}
+.tabs__item span{
+	position: relative;
+	z-index: 2;
+}
+.tabs__item span:hover{
+	text-shadow: 0px 0px 10px rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}
+.tabs__block::before{
+	content: '';
+	height: 25px;
+	width: 33.333%;
+	position: absolute;
+	top: -25px;
+}
+.tabs__block:nth-child(1)::before{
+	background-color: #5c7e97;
+	left: 0;
+	border-radius: 10px 10px 0px 0px;
+}
+.tabs__block:nth-child(2)::before{
+	background-color: #5c7e97;
+	left: 33.333%;
+	border-radius: 10px 10px 0px 0px;
+}
+.tabs__block:nth-child(3)::before{
+	background-color: #5c7e97;
+	right: 0;
+	border-radius: 10px 10px 0px 0px;
+}
+.tabs__body {
+}
+.tabs__block {
+	display: none;
+	position: relative;
+}
+.tabs__block:target{
+	display: block;
+}
+
+
