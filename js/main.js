@@ -2,38 +2,45 @@ window.addEventListener('load', async () => {
   const city = '710735';
   const API_KEY = 'd73d2e83494348c96b6d5be916099316';
 
+	function setCloudy(cloudyPercent, elements) {
+		switch (cloudyPercent) {
+			case cloudyPercent >= 80:
+				return elements[0].classList.add("active");
+			case cloudyPercent >= 60:
+				return elements[1].classList.add("active");
+			case cloudyPercent >= 40:
+				return elements[2].classList.add("active");
+			case cloudyPercent >= 20:
+				return elements[3].classList.add("active");
+			default:
+				return elements[4].classList.add("active")
+		}
+	}
+
   fetch(`http://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${API_KEY}&units=metric`)
     .then((data) => data.json())
     .then((data) => {
       console.log(data);
-		const temp = document.querySelector('.title-contant__temp');
-		const tempBack = Math.round(data.main.temp);
-		 temp.innerHTML = tempBack + ' ' + '<sup>o</sup> <span>C</span>';
-		 const pressure = document.querySelector('.title-contant__description-pressure');
-		 const pressureBack = data.main.pressure;
-		 pressure.innerHTML = `Pressure: ${pressureBack} mb`;
-		const precip = document.querySelector('.title-contant__description-precip');
-		const precipBack = data.main.humidity;
-		precip.innerHTML = `Precip: ${precipBack} mm`;
-		 const wind = document.querySelector('.title-contant__description-wind');
-		 const windBack = Math.round(data.wind.speed);
-		 wind.innerHTML = `Wind: ${windBack} kmph`;
-		 const cloudsSite = data.clouds.all;
-const clouds = document.querySelector('.title-contant__image');
-		 console.log(clouds);
-		 let cloudsActive = clouds.children;;
-		 if (cloudsSite >= 80) {
-			 cloudsActive[0].classList.add("active")
-		 } else if (80 > cloudsSite >= 60) {
-			cloudsActive[1].classList.add("active")
-		 } else if (60 > cloudsSite >= 40) {
-			cloudsActive[2].classList.add("active")
-		 } else if (40 > cloudsSite >= 20) {
-			cloudsActive[3].classList.add("active")
-		 } else if (20 > cloudsSite >= 0) {
-			cloudsActive[4].classList.add("active")
-		 }
-    }) 
+			const temp = document.querySelector('.title-contant__temp');
+			const pressure = document.querySelector('.title-contant__description-pressure');
+			const precip = document.querySelector('.title-contant__description-precip');
+			const wind = document.querySelector('.title-contant__description-wind');
+			const clouds = document.querySelector('.title-contant__image');
+
+			const tempBack = Math.round(data.main.temp);
+			const pressureBack = data.main.pressure;
+			const precipBack = data.main.humidity;
+			const windBack = Math.round(data.wind.speed);
+			const cloudsSite = data.clouds.all;
+
+			temp.innerHTML = tempBack + ' ' + '<sup>o</sup> <span>C</span>';
+		  pressure.innerHTML = `Pressure: ${pressureBack} mb`;
+			precip.innerHTML = `Precip: ${precipBack} mm`;
+			wind.innerHTML = `Wind: ${windBack} kmph`;
+
+			let cloudsActive = clouds.children;
+			setCloudy(cloudsSite, cloudsActive);
+    })
 });
 
 
