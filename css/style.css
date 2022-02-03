@@ -209,8 +209,16 @@ margin: 30px 0px;
 	font-weight: 600;
 	text-align: center;
 }
+.title-contact__block1, .title-contact__block2, .title-contact__block3, .title-contact__block4, .title-contact__block5 {
+display: none;
+}
+.title-contact__block1.active, .title-contact__block2.active, .title-contact__block3.active, .title-contact__block4.active, .title-contact__block5.active {
+	display: block;
+	}
+	
 .title-contant {
 	display: flex;
+	align-items: center;
 }
 .title-contant__image img{
 	max-width:50px;
